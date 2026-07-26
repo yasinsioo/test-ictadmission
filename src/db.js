@@ -1,14 +1,13 @@
-'use strict';
+"use strict";
 
-const Database = require('better-sqlite3');
-const path = require('path');
+const Database = require("better-sqlite3");
+const path = require("path");
 
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, '..', 'logbook.db');
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, "..", "logbook.db");
 
 const db = new Database(DB_PATH);
-db.pragma('journal_mode = WAL');
+db.pragma("journal_mode = WAL");
 
-// Ensure schema exists — runs on every startup (no-op if table already present)
 db.exec(`
   CREATE TABLE IF NOT EXISTS entries (
     id      INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -1,20 +1,27 @@
-'use strict';
+"use strict";
 
-const path = require('path');
-const db = require('./db'); // also creates table via CREATE TABLE IF NOT EXISTS
+const path = require("path");
+const db = require("./db");
 
-const { count } = db.prepare('SELECT COUNT(*) AS count FROM entries').get();
+const { count } = db.prepare("SELECT COUNT(*) AS count FROM entries").get();
 
 if (count === 0) {
-  const samples = require(path.join(__dirname, '..', 'sample-data', 'data.json'));
+  const samples = require(
+    path.join(__dirname, "..", "sample-data", "data.json"),
+  );
 
   const insert = db.prepare(
-    'INSERT INTO entries (title, body, lat, lon, isoTime) VALUES (@title, @body, @lat, @lon, @isoTime)'
+    "INSERT INTO entries (title, body, lat, lon, isoTime) VALUES (@title, @body, @lat, @lon, @isoTime)",
   );
 
   const insertMany = db.transaction((rows) => {
     for (const row of rows) {
-      insert.run({ ...row, lat: row.lat ?? null, lon: row.lon ?? null, isoTime: new Date().toISOString() });
+      insert.run({
+        ...row,
+        lat: row.lat ?? null,
+        lon: row.lon ?? null,
+        isoTime: new Date().toISOString(),
+      });
     }
   });
 
@@ -24,4 +31,4 @@ if (count === 0) {
   console.log(`DB already has ${count} entries.`);
 }
 
-console.log('Done.');
+console.log("Done.");
