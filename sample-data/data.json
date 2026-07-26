@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Night perimeter check",
+    "body": "All clear around main gate.",
+    "lat": 60.1503,
+    "lon": 25.0293
+  },
+  {
+    "title": "Generator maintenance",
+    "body": "Changed oil and inspected filters.",
+    "lat": 60.1561,
+    "lon": 25.0249
+  },
+  {
+    "title": "Weather update",
+    "body": "Heavy rainfall expected after 1600 hrs.",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "title": "Drone sighting",
+    "body": "Quad-copter over Vuosaari direction, 200 m AGL.",
+    "lat": 60.1568,
+    "lon": 25.0472
+  },
+  {
+    "title": "Supply drop received",
+    "body": "Ammo and rations accounted for.",
+    "lat": 60.1534,
+    "lon": 25.0367
+  },
+  {
+    "title": "Radio outage",
+    "body": "Primary HF link down for 12 min — rebooted transceiver.",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "title": "Medical check",
+    "body": "One soldier treated for mild hypothermia.",
+    "lat": 60.1510,
+    "lon": 25.0324
+  },
+  {
+    "title": "Patrol departure",
+    "body": "Alpha team left for sector Santahamina east shore.",
+    "lat": 60.1496,
+    "lon": 25.0441
+  },
+  {
+    "title": "Wildlife interference",
+    "body": "Fox damaged comms cable near OP-2; temporary fix applied.",
+    "lat": 60.1479,
+    "lon": 25.0198
+  },
+  {
+    "title": "Sync to HQ",
+    "body": "Logbook synced over SATCOM. All entries acknowledged.",
+    "lat": null,
+    "lon": null
+  }
+]
