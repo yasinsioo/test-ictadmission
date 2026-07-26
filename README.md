@@ -6,7 +6,7 @@ npm run db:init   # database + 10 sample records
 npm run dev       # http://localhost:8000
 ```
 
-## Endpointler
+## Endpoints
 
 | Method | Endpoint           | Description         |
 | ------ | ------------------ | ------------------- |
