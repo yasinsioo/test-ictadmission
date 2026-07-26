@@ -29,4 +29,4 @@ docker build -t logbook .
 docker run -p 8000:8000 logbook
 ```
 
-Public URL: <YOUR_RENDER_URL>
+Public URL: (https://test-ictadmission.onrender.com/)
